@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}CyLys{% endblock %}</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>🛡️</text></svg>">
+
+    {% block stylesheets %}
+    {% endblock %}
+
+    {% block javascripts %}
+        {% block importmap %}{{ importmap('app') }}{% endblock %}
+    {% endblock %}
+</head>
+
+<body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
+
+<!-- Navigation top -->
+<header class="bg-white shadow">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-blue-600">CyLys</h1>
+        <nav class="space-x-4 text-sm text-gray-600">
+            <a href="#" class="hover:text-blue-500">Dashboard</a>
+            <a href="#" class="hover:text-blue-500">Normes</a>
+            <a href="#" class="hover:text-blue-500">Assets</a>
+            <a href="#" class="hover:text-blue-500">Politiques</a>
+            <a href="#" class="hover:text-blue-500">Connexion</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Contenu principal -->
+<main class="container mx-auto flex-grow px-4 py-8">
+    {% block body %}{% endblock %}
+</main>
+
+<!-- Pied de page -->
+<footer class="bg-white shadow p-4 text-center text-sm text-gray-500">
+    © {{ "now"|date("Y") }} CyLys – Reprenez le contrôle de votre cybersécurité
+</footer>
+</body>
+</html>
