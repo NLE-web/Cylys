@@ -23,6 +23,8 @@
         "symfony/mercure-bundle": "^0.3.9",
         "symfony/runtime": "7.2.*",
         "symfony/twig-bundle": "7.2.*",
+        "symfony/ux-icons": "*",
+        "symfony/ux-live-component": "*",
         "symfony/yaml": "7.2.*",
         "symfonycasts/tailwind-bundle": "^0.10.0",
         "twig/extra-bundle": "^2.12|^3.0",
@@ -81,6 +83,8 @@
         }
     },
     "require-dev": {
-        "symfony/maker-bundle": "^1.63"
+        "symfony/maker-bundle": "^1.63",
+        "symfony/stopwatch": "7.2.*",
+        "symfony/web-profiler-bundle": "7.2.*"
     }
 }

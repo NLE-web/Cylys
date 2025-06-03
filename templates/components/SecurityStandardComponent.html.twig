@@ -1,0 +1,31 @@
+<div {{ attributes }}>
+    {% if this.mode == 'form' %}
+        {% if this.securityStandard is not null %}
+            <label for="title">Titre</label>
+            <input id="title" type="text" data-model="securityStandard.title">
+            <label for="code">Code</label>
+            <input id="code" type="text" data-model="securityStandard.code">
+            <label for="description">Description</label>
+            <input id="description" type="text" data-model="securityStandard.description">
+            <label for="level">Niveau</label>
+            <input id="level" type="text" data-model="securityStandard.level">
+            <label for="domain">Domaine</label>
+            <input id="domain" type="text" data-model="securityStandard.domain">
+            <button
+                data-action="live#action"
+                data-live-action-param="save"
+            >
+                Sauver
+            </button>
+            {% else %}
+            <button
+                data-action="live#action"
+                data-live-action-param="new"
+            >
+                Nouveau standard de sécurité
+            </button>
+        {% endif %}
+
+    {% endif %}
+
+</div>
